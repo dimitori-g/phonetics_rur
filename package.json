@@ -5,7 +5,8 @@
   "author": "dima <dimitori.g@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "docker build -t phonetics . && docker run -p 3000:3000 --name phonetics phonetics",
-    "clear": "docker container rm phonetics && docker rmi phonetics"
+    "dev": "docker build -t phonetics . && docker run -p 80:3000 --name phonetics phonetics",
+    "clear": "docker container rm phonetics && docker rmi phonetics",
+    "restart": "yarn clear && yarn dev"
   }
 }
