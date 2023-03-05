@@ -5,4 +5,5 @@ WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 COPY . .
+EXPOSE 80
 CMD ["rails", "server", "-b", "0.0.0.0"]
